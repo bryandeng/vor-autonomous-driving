@@ -1,0 +1,25 @@
+# ratio = height/width
+
+[Car]
+min_width == 23.22
+min_height == 15.37
+max_width == 402.31
+max_height == 193.1
+max_ratio == 0.96795985331
+min_ratio == 0.344980868782
+
+[Pederstrian]
+min_width == 30.71
+min_height == 59.9
+max_width == 98.33
+max_height == 164.92
+max_ratio == 1.95050472159
+min_ratio == 1.67720939693
+
+[Cyclist]
+min_width == 12.38
+min_height == 29.98
+max_width == 25.01
+max_height == 37.51
+max_ratio == 2.42164781906
+min_ratio == 1.49980007997
