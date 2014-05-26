@@ -26,13 +26,13 @@ fi
 # Pedestrian  70 126 / 60 108
 # Cyclist 22 38 / 18 32
 
-python scripts/generate_negative_samples.py -i ${NEGATIVES_PATH} -o ${KITTI_NEGATIVES_DIR} --target_size "90,50" --sample_ratio 1.8
+python scripts/generate_negative_samples.py -i ${NEGATIVES_PATH} -o ${KITTI_NEGATIVES_DIR} --target_size "90,50" --sample_ratio 1.8 -n 2000
 python scripts/kitti_create_multiscales_training_dataset_car.py -i $KITTI_TRAIN_SET_DIR -o ${KITTI_MULTISCALES_TRAIN_SET_DIR}/Car -c 'Car'
 rm -r $KITTI_NEGATIVES_DIR
-python scripts/generate_negative_samples.py -i ${NEGATIVES_PATH} -o ${KITTI_NEGATIVES_DIR} --target_size "60,108" --sample_ratio 0.55
+python scripts/generate_negative_samples.py -i ${NEGATIVES_PATH} -o ${KITTI_NEGATIVES_DIR} --target_size "60,108" --sample_ratio 0.55 -n 2000
 python scripts/kitti_create_multiscales_training_dataset_pedestrian.py -i $KITTI_TRAIN_SET_DIR -o ${KITTI_MULTISCALES_TRAIN_SET_DIR}/Pedestrian -c 'Pedestrian'
 rm -r $KITTI_NEGATIVES_DIR
-python scripts/generate_negative_samples.py -i ${NEGATIVES_PATH} -o ${KITTI_NEGATIVES_DIR} --target_size "80,100" --sample_ratio 0.57
+python scripts/generate_negative_samples.py -i ${NEGATIVES_PATH} -o ${KITTI_NEGATIVES_DIR} --target_size "80,100" --sample_ratio 0.57 -n 2000
 python scripts/kitti_create_multiscales_training_dataset_cyclist.py -i $KITTI_TRAIN_SET_DIR -o ${KITTI_MULTISCALES_TRAIN_SET_DIR}/Cyclist -c 'Cyclist'
 
 
